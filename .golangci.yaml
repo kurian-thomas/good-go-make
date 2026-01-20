@@ -1,0 +1,25 @@
+version: 2
+
+run:
+  timeout: 5m
+  tests: false # Optional: don't lint test files if they are messy
+
+linters:
+  disable-all: true
+  enable:
+    - govet        # Official Go tool (correctness)
+    - staticcheck  # The best 3rd party analysis (bugs/performance)
+    - ineffassign  # Detects unused assignments
+    - unused       # Finds unused constants/functions
+    - revive       # Replacement for the deprecated 'golint' (style)
+    - errcheck     # Forces you to handle errors        
+
+formatters:
+  enable:
+    - gci           # Enforces deterministic import ordering
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/mycompany/myproject)
