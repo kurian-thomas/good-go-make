@@ -19,7 +19,7 @@ and go.sum to have the respective checksums
 
 To latest: go get github.com/gin-gonic/gin@latest (Not Recomended)
 
-2. for major ver changes ofvX, where X >= 2
+2. for major ver changes of vX, where X >= 2
 
 ```
 go get <package_path>/vX@<version>
@@ -34,7 +34,7 @@ make tidy
 foo_test.go next to foo.go
 
 package pkg (white-box, full access, private methos valiadtion)
-package okg_test (black-box, cannt access private members)
+package pkg_test (black-box, cannt access private members)
 
 make unit-test
 
